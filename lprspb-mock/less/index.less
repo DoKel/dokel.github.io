@@ -1,0 +1,90 @@
+// out: ../css/index.css, sourcemap: false, compress: true
+@bgcolor: black;
+@bgcolor_hover: red;
+
+@fgcolor: #F1F1F1;
+@accent_color: #CAA562;
+
+@mainfont: 'Roboto';
+@mainfont_fallback: sans-serif;
+
+body {
+	background: @bgcolor;
+	color: @fgcolor;
+	font-family: @mainfont, @mainfont_fallback;
+	min-width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: auto;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.top_container {
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	margin-left: 5%;
+	min-height: 100vh;
+	box-sizing: border-box;
+
+	.logo_row {
+		flex-grow: 0;
+		max-width: 100%;
+
+		.logo {
+			width: 66%;
+			height: auto;
+			max-width: 400px;
+		}
+	}
+
+	.title_row {
+		flex-grow: 2;
+		h1, h2 {
+			font-weight: normal;
+		}
+	}
+
+	.contacts_row {
+		flex-grow: 1;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+		div {
+			min-width: 30%;
+			margin: 15px;
+		}
+
+		h3 {
+			font-size: 1rem;
+			font-weight: normal;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+a {
+	color: @accent_color;
+	text-decoration: none;
+	transition: 0.3s;
+
+	&:hover {
+		color: @fgcolor;
+	}
+}
+
+.button {
+	font-size: 1.7rem;
+}
